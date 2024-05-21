@@ -1,0 +1,13 @@
+{% load permission_tags %}
+
+{% if user|has_role:'professor'%}
+Página do professor
+{% else %}
+Página do aluno
+{% endif %} 
+
+{% comment %} {% if user|can:'ver_alunos'%} #Professores
+Página do professor
+{% else %}
+Página do aluno
+{% endif %}  {% endcomment %} 
